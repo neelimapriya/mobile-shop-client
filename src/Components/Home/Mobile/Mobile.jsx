@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import useAxios from "../../Hook/useAxios";
 import { useState } from "react";
 import MobileCard from "./MobileCard";
+import { ClipLoader } from "react-spinners";
 
 const Mobile = () => {
     const axiosUrl =useAxios()
@@ -56,11 +57,29 @@ const Mobile = () => {
       </form>
             </div>
 
-            <div className=" grid justify-center grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 mt-10 max-w-6xl mx-auto p-2 ">
+            <div>
+            {
+                loading ? <div className="flex justify-center items-center text-center">
+                  <ClipLoader
+                
+               
+                loading={loading}
+               
+                size={250}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+              />
+                </div>:
+              <div className=" grid justify-center grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 mt-10 max-w-6xl mx-auto p-2 ">
+             
               {
                 mobiles.map(mobile => <MobileCard key={mobile._id} mobile={mobile} refetch={refetch}></MobileCard>)
               }
             </div>
+              }
+            </div>
+
+            
             
         </div>
     );
