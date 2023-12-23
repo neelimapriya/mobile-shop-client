@@ -1,0 +1,57 @@
+[
+    {
+      "img": "https://i.ibb.co/6ZG2D0g/samsung-galaxy-s22-bora-purple-128-gb-sms901ulvv.png",
+      "price": 899.99,
+      "name": "samsung-galaxy-s22",
+      "type": "samsung",
+      "processor": "Snapdragon 865",
+      "memory": "6GB RAM",
+      "OS": "Android 11"
+    },
+    {
+      "img": "https://i.ibb.co/nQLwB1N/i-Phone-14-Pro-Max-Deep-purple.jpg",
+      "price": 1299.99,
+      "name": "Apple iPhone 14",
+      "type": "Apple",
+      "processor": "Apple A15 Bionic",
+      "memory": "128GB",
+      "OS": "iOS 15"
+    },
+    {
+      "img": "https://i.ibb.co/Hx96MPZ/Apple-i-Phone-11-1-500x500.jpg",
+      "price": 499.99,
+      "name": "Apple iPhone 11",
+      "type": "Apple",
+      "processor": "Exynos 2100",
+      "memory": "256GB",
+      "OS": "iOS 12"
+    },
+    {
+      "img": "https://i.ibb.co/nk9f79p/Asus-Rog-Phone-6-4-768x768.jpg",
+      "price": 699.99,
+      "name": "Asus ROG Phone 6",
+      "type": "Asus",
+      "processor": "Kirin 9000",
+      "memory": "8GB RAM",
+      "OS": "EMUI 12"
+    },
+    {
+      "img": "https://i.ibb.co/ykpy4TP/all-nova-y70.png",
+      "price": 199.99,
+      "name": "HUAWEI P60 Pro",
+      "type": "HUAWEI",
+      "processor": "MediaTek Dimensity 1200",
+      "memory": "128GB",
+      "OS": "Android 11"
+    },
+    {
+      "img": "https://i.ibb.co/BBB0jbp/b03d9cc23cc54795104b609bd32117f2.png",
+      "price": 599.99,
+      "name": "VIVO Y36",
+      "type": "VIVO",
+      "processor": "Snapdragon 870",
+      "memory": "12GB RAM",
+      "OS": "OxygenOS 12"
+    }
+  ]
+  

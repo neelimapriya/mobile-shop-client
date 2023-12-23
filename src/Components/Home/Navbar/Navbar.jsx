@@ -1,7 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../../assets/mobileLogo-removebg-preview.png'
 import useAuth from "../../Hook/useAuth";
+import useCart from "../../Hook/useCart";
 const Navbar = () => {
+  const [cart]=useCart()
 
   const {user, logOut}=useAuth()
   const handleLogout = () => {
@@ -14,7 +16,7 @@ const Navbar = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li className="text-xl font-serif  hover:text-red-700">
-            <NavLink to="/cart">Cart</NavLink>
+            <NavLink to="/cart">Cart {cart?.length}</NavLink>
           </li>
         
         </>

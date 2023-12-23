@@ -1,11 +1,10 @@
 import axios from "axios";
 
-const axiosUrl = axios.create({
-  baseUrl: "http://localhost:5000",
+const axiosPublic = axios.create({
+  baseURL: "https://mobile-shop-server-one.vercel.app",
 });
-const useAxios = () => {
-  return axiosUrl;
-  
+const useAxiosPublic = () => {
+  return axiosPublic;
 };
 
-export default useAxios;
+export default useAxiosPublic;

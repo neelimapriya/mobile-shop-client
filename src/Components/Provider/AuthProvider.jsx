@@ -8,16 +8,18 @@ import {
   updateProfile,
 } from "firebase/auth";
 import app from "../../Firebase/Firebase.config";
-import useAxios from "../Hook/useAxios";
+import useAxiosPublic from "../Hook/useAxios";
+
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
+  const axiosPublic = useAxiosPublic();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const axiosUrl = useAxios();
+  
 
   const createUser = (email, password) => {
     setLoading(true);
@@ -47,7 +49,7 @@ const AuthProvider = ({ children }) => {
       if (currentUser) {
         // get token and store client
         const userInfo = { email: currentUser.email };
-        axiosUrl.post("/jwt", userInfo).then((res) => {
+        axiosPublic.post("/jwt", userInfo).then((res) => {
           if (res.data.token) {
             localStorage.setItem("access-token", res.data.token);
             setLoading(false);
@@ -61,7 +63,7 @@ const AuthProvider = ({ children }) => {
     return () => {
       return unsubscribe();
     };
-  }, [axiosUrl]);
+  }, [axiosPublic]);
 
   const authInfo = {
     user,
