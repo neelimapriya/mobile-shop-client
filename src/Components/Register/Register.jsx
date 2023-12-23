@@ -43,22 +43,15 @@ const Register = () => {
 
     createUser(email, password).then((result) => {
       console.log(result.user);
-
-      updateProfile(result.user, {
-        displayName: name,
-      }).then((res) => {
-        if (res.data.insertedId) {
-          Swal.fire({
-            position: "top",
-            icon: "success",
-            title: "Account created Successfully",
-            showConfirmButton: false,
-            timer: 1500,
-          });
-          e.target.reset();
-          navigate("/");
-        }
+      Swal.fire({
+        position: "top",
+        icon: "success",
+        title: "Account created Successfully",
+        showConfirmButton: false,
+        timer: 1500,
       });
+      e.target.reset();
+      navigate("/");
     });
   };
 
