@@ -14,7 +14,7 @@ const MobileCard = ({ mobile, refetch }) => {
 
   const handleAddcart=()=>{
     if(!user){
-        navigate('/login')
+       return navigate('/login')
     }
     const cartInfo={
         img, OS, memory, name, price, processor, type, email:mail

@@ -1,4 +1,4 @@
-# live link : https://mobile-shop-a67d3.web.app
+# live link : https://tangerine-alfajores-0f3964.netlify.app
 
 ## This is a simple mobile shop. Where logged in user can add mobile on cart and delete them from cart.
 
